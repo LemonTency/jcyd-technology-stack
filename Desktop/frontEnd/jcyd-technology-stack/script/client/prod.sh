@@ -1,1 +1,1 @@
-export NODE_ENV='production' && webpack
+export NODE_ENV='production' && pack

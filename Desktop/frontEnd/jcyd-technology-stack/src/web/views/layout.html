@@ -9,8 +9,25 @@
 </head>
 
 <body>
-    {% include '../../web/components/banner/banner.html' %}
-    {% block content %}{% endblock %}
+    {% include '../components/banner/banner.html' %}
+    <div id="app">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.js"></script>
+    <script>
+        // $.pjax({
+        //     selector: 'a',
+        //     container: '#app', //内容替换的容器
+        //     show: 'fade',  //展现的动画，支持默认和fade, 可以自定义动画方式，这里为自定义的function即可。
+        //     cache: true,  //是否使用缓存
+        //     storage: true,  //是否使用本地存储
+        //     titleSuffix: '', //标题后缀
+        //     filter: function () { },
+        //     callback: function () { }
+        // })
+        $(document).pjax('a', "#app")
+    </script>
     <!-- block content的位置是留给html的 -->
     {% block scripts %}{% endblock %}
     <!-- block scripts的位置是留给js的 -->

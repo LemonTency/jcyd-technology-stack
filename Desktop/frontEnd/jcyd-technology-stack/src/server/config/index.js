@@ -5,8 +5,8 @@ const {
 const _ = require("lodash");
 
 let config = {
-  "viewDir": join(__dirname, "../../web", "views"),
-  "staticDir": join(__dirname, '../../web', "assets")
+  "viewDir": join(__dirname, "../", "views"),
+  "staticDir": join(__dirname, '../', "assets")
 };
 
 if (process.env.NODE_ENV == "development") {

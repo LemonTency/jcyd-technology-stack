@@ -46,7 +46,8 @@ const commonConfig = {
   entry: entrys,
   // entry: './src/web/index.tsx',
   output: {
-    path: join(__dirname, './dist/web/assets'),
+    path: join(__dirname, './dist/assets'),
+    publicPath: '/',
     filename: '[name].[hash].js'
   },
   // output: {
@@ -94,9 +95,9 @@ const commonConfig = {
   ),
   new CopyPlugin({
     patterns: [{
-      from: join(__dirname, './src/web/components'), to: join(__dirname, './dist/web/components')
+      from: join(__dirname, './src/web/components'), to: join(__dirname, './dist/components')
     }, {
-      from: join(__dirname, './src/web/views/layout.html'), to: join(__dirname, './dist/web/views/layout.html')
+      from: join(__dirname, './src/web/views/layout.html'), to: join(__dirname, './dist/views/layout.html')
     }]
   }),
   new AfterHtmlPlugin()

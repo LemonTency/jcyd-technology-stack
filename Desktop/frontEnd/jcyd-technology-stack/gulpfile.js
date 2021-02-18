@@ -19,7 +19,7 @@ function buildDev() {
       {
         "plugins": ["@babel/plugin-transform-modules-commonjs"]
       }
-    )).pipe(gulp.dest('dist/server'))
+    )).pipe(gulp.dest('dist'))
 }
 
 function buildProd() {

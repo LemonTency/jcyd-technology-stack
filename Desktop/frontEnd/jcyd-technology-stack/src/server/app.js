@@ -17,6 +17,7 @@ const errorHandler = require('./middleware/errorHandler');
 
 const log4js = require('log4js');
 
+
 const config = require('./config'); //console.log('哈哈哈',process.env.NODE_ENV);
 //哈哈哈 development
 //process.env.NODE_ENV是当前的环境
@@ -45,7 +46,7 @@ log4js.configure({
   appenders: {
     cheese: {
       type: 'file',
-      filename: 'logs/zty.log'
+      filename: __dirname + '/logs/zty.log'
     }
   },
   categories: {
